@@ -62,9 +62,17 @@ export default class Gantt {
         this.$container = document.createElement('div');
         this.$container.classList.add('gantt-container');
 
+        this.$resourceArea = document.createElement('div');
+        this.$resourceArea.classList.add('gantt-resourceArea');
+
+        this.$ganttArea = document.createElement('div');
+        this.$ganttArea.classList.add('gantt-ganttArea');
+
         const parent_element = this.$svg.parentElement;
         parent_element.appendChild(this.$container);
-        this.$container.appendChild(this.$svg);
+        this.$container.appendChild(this.$resourceArea);
+        this.$container.appendChild(this.$ganttArea);
+        this.$ganttArea.appendChild(this.$svg);
 
         // popup wrapper
         this.popup_wrapper = document.createElement('div');

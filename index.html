@@ -81,7 +81,15 @@
 				name: 'Long term task',
 				id: "Task 6",
 				progress: 0
-			}
+			},
+			...Array(100).fill().map(e => ({
+				start: '2014-01-05',
+				end: '2019-10-12',
+				name: 'Long term task',
+				id: "Task 6",
+				progress: 0
+			}))
+			
 		]
 		var gantt_chart = new Gantt(".gantt-target", tasks, {
 			on_click: function (task) {
